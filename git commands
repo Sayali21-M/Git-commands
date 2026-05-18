@@ -1,0 +1,79 @@
+git init
+--This command initializes a new Git repository in the current folder.
+--It creates a hidden .git directory that stores all version control information.
+
+
+get status
+--Gives the information of the current state of the git repo
+
+git branch
+--This command is used to view or create branches.
+
+To create a new branch:
+
+--git branch dev
+
+This creates a branch named dev but does not switch to it.
+
+git checkout -b <branch name>
+--Switching to new branch if you want to switch to an existing branch then use git checkout branch with -b
+When you do not want to affect your actual/main code, you create a separate branch.
+
+Equivalent to:
+
+git branch dev
+git checkout dev
+
+Output:
+
+Switched to a new branch 'dev'
+
+--git checkout -b master
+Switched to a new branch 'master'
+
+--git add <file name>   
+This command adds the file test.py to the Git staging area.
+It means Git will now track the changes made in test.py for the next commit.
+it will use to stage untracked file
+
+
+after deleting 
+it will deleted from system but not from git
+so restore it whenever you need using..
+
+git restore --staged <file name>
+--used to untracked/tracked the staged file
+
+
+
+git branch
+--gives the info / list all the branches in git repo
+
+git commit -m "<your message>"
+--Used to track the staged files after being added by git add
+
+
+git clone <repository-url>
+--git clone is used to copy/download an existing remote Git repository to your local system.
+
+In your local you did git init and get repository what is the by default branch name--->master
+and when you use git clone or github at that time by default branch name is ---main
+
+
+git push origin main
+--Pushes your local commits from the main branch to the remote repository (usually GitHub).
+
+git push → upload changes
+origin → remote repository name
+main → branch name
+
+git remote -v
+--Shows the remote repository URLs connected to your project.
+eg:
+origin  https://github.com/user/project.git (fetch)
+origin  https://github.com/user/project.git (push)
+
+git pull origin main
+--Downloads the latest changes from the remote main branch and merges them into your local branch.
+git pull → fetch + merge
+
